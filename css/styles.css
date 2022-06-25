@@ -100,15 +100,15 @@ address {
 }
 
 /* Header */
-.header-page {
+.header {
   border-bottom: 1px solid var(--header-border-color);
 }
-.header-nav {
+.header__item {
   display: flex;
   align-items: center;
 }
 
-.nav-page {
+.header-nav {
   display: flex;
   align-items: center;
 }
@@ -119,26 +119,22 @@ address {
   line-height: 1.19;
 }
 
-.logo .accent {
+.logo__accent {
   color: var(--accent-color);
 }
-.nav-item {
+.header-nav__item {
   display: flex;
   margin-left: 93px;
   align-items: center;
 }
-
-/* .nav-inner:not(:last-child){
-    margin-right: 50px;
-} */
-.nav-inner {
+.header-nav__inner {
   position: relative;
 }
-.nav-inner + .nav-inner {
-  margin-left: 50px;
+.header-nav__inner:not(:last-child) {
+  margin-right: 50px;
 }
 
-.current::after {
+.header-nav__inner--current::after {
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -150,42 +146,38 @@ address {
   border-radius: 2px;
 }
 
-.nav-link,
-.contact-link {
+.header-nav__link,
+.header-contacts__link {
   display: flex;
   align-items: center;
   padding: 32px 0 31px 0;
   transition: color 250ms var(--transition-timing-function);
-}
-
-.nav-page .nav-link,
-.contact-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contacts {
+.header-contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contact-link {
+.header-contacts__link {
   color: var(--third-text-color);
 }
-.contact-link > svg {
+
+.header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
-
-.contacts-item + .contacts-item {
-  margin-left: 50px;
+.header-contacts__item:not(:last-child) {
+  margin-right: 50px;
 }
 
-.nav-link:hover,
-.contact-link:hover,
-.nav-link:focus,
-.contact-link:focus {
+.header-nav__link:hover,
+.header-nav__link:focus,
+.header-contacts__link:hover,
+.header-contacts__link:focus {
   color: var(--accent-color);
 }
 
@@ -608,7 +600,7 @@ address {
 .footer-subtitle {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--second-text-color);
   margin-bottom: 20px;
