@@ -30,6 +30,8 @@
     }
 }
 .nav__item--current {
+    color: $accent-color ;
+
     &::after {
         content: '';
         position: absolute;
@@ -38,7 +40,7 @@
 
         width: 100%;
         height: 4px;
-        background: $accent-color;
+        background-color: $accent-color;
         border-radius: 2px;
     }
 }
